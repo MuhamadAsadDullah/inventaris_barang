@@ -70,7 +70,7 @@
 .card {
     border: none;
     border-radius: 4px;
-    background-color: #fff;
+    background-color: #27293D;
     -webkit-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
 }
@@ -90,7 +90,7 @@
 
 .main-content {
     width: 100%;
-    background: #F3F8FB;
+    background: #1E1E2E;
 }
 
 .main-content-inner {

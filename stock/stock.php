@@ -154,28 +154,6 @@
                             </form>
                         </div>
                     </div>
-                    <!-- profile info & task notification -->
-                    <div class="col-md-6 col-sm-4 clearfix">
-                        <ul class="notification-area pull-right">
-                            <li><h3><div class="date">
-								<script type='text/javascript'>
-						<!--
-						var months = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
-						var myDays = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
-						var date = new Date();
-						var day = date.getDate();
-						var month = date.getMonth();
-						var thisDay = date.getDay(),
-							thisDay = myDays[thisDay];
-						var yy = date.getYear();
-						var year = (yy < 1000) ? yy + 1900 : yy;
-						document.write(thisDay + ', ' + day + ' ' + months[month] + ' ' + year);		
-						//-->
-						</script></b></div></h3>
-
-						</li>
-                        </ul>
-                    </div>
                 </div>
             </div>
             <!-- header area end -->
@@ -196,26 +174,7 @@
 					}
 				}
 				?>
-			
-            <!-- page title area start -->
-            <div class="page-title-area">
-                <div class="row align-items-center">
-                    <div class="col-sm-6">
-                        <div class="breadcrumbs-area clearfix">
-                            <h4 class="page-title pull-left">Dashboard</h4>
-                            <ul class="breadcrumbs pull-left">
-                                <li><a href="index.php">Home</a></li>
-                                <li><span>Daftar Barang</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 clearfix">
-                        <div class="user-profile pull-right" style="color:black; padding:0px;">
-                            <img src="log.jpg" width="220px" class="user-name dropdown-toggle" data-toggle="dropdown"\>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                
             <!-- page title area end -->
             <div class="main-content-inner">
                
