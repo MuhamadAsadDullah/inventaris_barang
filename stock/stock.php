@@ -105,9 +105,21 @@
     <!-- page container area start -->
     <div class="page-container">
         <!-- sidebar menu area start -->
-        <div class="sidebar-menu">
+        <!-- <div class="sidebar-menu">
             <div class="sidebar-header">
-                    <a href="index.php"><img src="../logo.png" alt="logo" width="100%"></a>
+                    
+            <div class="col-md-6 col-sm-8 clearfix">
+                        <div class="nav-btn pull-left">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="search-box pull-left">
+                            <form action="#">
+                                <h2>Hi, <?=$_SESSION['user'];?>!</h2>
+                            </form>
+                        </div>
+                    </div>
             </div>
             <div class="main-menu">
                 <div class="menu-inner">
@@ -134,29 +146,11 @@
                     </nav>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- sidebar menu area end -->
         <!-- main content area start -->
         <div class="main-content">
-            <!-- header area start -->
-            <div class="header-area">
-                <div class="row align-items-center">
-                    <!-- nav and search button -->
-                    <div class="col-md-6 col-sm-8 clearfix">
-                        <div class="nav-btn pull-left">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                        <div class="search-box pull-left">
-                            <form action="#">
-                                <h2>Hi, <?=$_SESSION['user'];?>!</h2>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- header area end -->
+
 			<?php 
 			
 				$periksa_bahan=mysqli_query($conn,"select * from sstock_brg where stock <1");
@@ -174,7 +168,7 @@
 					}
 				}
 				?>
-                
+
             <!-- page title area end -->
             <div class="main-content-inner">
                
@@ -184,20 +178,24 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-sm-flex justify-content-between align-items-center">
-									<h2>Daftar Barang</h2>
+									<h2 class="table-tittle">Daftar Barang</h2>
 									<button style="margin-bottom:20px" data-toggle="modal" data-target="#myModal" class="btn btn-info col-md-2"><span class="glyphicon glyphicon-plus"></span>Tambah Barang</button>
                                 </div>
                                     <div class="data-tables datatable-dark">
-										 <table id="dataTable3" class="display" style="width:100%"><thead class="thead-dark">
+										 <table id="mytable" class="display" style="width:100%">
+                                         <thead class="thead-dark">
 											<tr>
-												<th>No</th>
-												<th>Nama Barang</th>
-												<th>Jenis</th>
-												<th>Merk</th>
-												<th>Stock</th>
+												<th>NO</th>
+												<th>NAMA BARANG</th>
+												<th>JENIS</th>
+												<th>MERK</th>
+												<th>STOCK</th>
 												
-												<th>Opsi</th>
-											</tr></thead><tbody>
+												<th>OPSI</th>
+											</tr>
+                                        </thead>
+                                            
+                                        <tbody>
 											<?php 
 											$brgs=mysqli_query($conn,"SELECT * from sstock_brg order by nama ASC");
 											$no=1;
@@ -205,6 +203,7 @@
                                                 $idb = $p['idx'];
 												?>
 												
+                                                <div class="jarak-baris">
 												<tr>
 													<td><?php echo $no++ ?></td>
 													<td><?php echo $p['nama'] ?></td>
@@ -213,6 +212,7 @@
 													<td><?php echo $p['stock'] ?></td>
                                                     <td><button data-toggle="modal" data-target="#edit<?=$idb;?>" class="btn btn-warning">Edit</button> <button data-toggle="modal" data-target="#del<?=$idb;?>" class="btn btn-danger">Del</button></td>
 												</tr>
+                                                </div>
 
 
                                                 <!-- The Modal -->
@@ -300,14 +300,6 @@
                 <!-- row area start-->
             </div>
         </div>
-        <!-- main content area end -->
-        <!-- footer area start-->
-        <footer>
-            <div class="footer-area">
-                <p>By Richard's Lab</p>
-            </div>
-        </footer>
-        <!-- footer area end-->
     </div>
     <!-- page container area end -->
 	

@@ -48,9 +48,13 @@
    24. Pricing
    25. 404 Page
    26. Offset Sidebar
+   27. Mytable
 
 -----------------------------------------------------------------------------------*/
-
+* {
+    margin: 0;
+    padding: 0;
+}
 
 /*------------------------- 1. Core Css -------------------*/
 
@@ -61,6 +65,7 @@
     padding-left: 280px;
     -webkit-transition: padding-left 0.3s ease 0s;
     transition: padding-left 0.3s ease 0s;
+    background-color: #1E1E2E;
 }
 
 .sbar_collapsed.page-container {
@@ -1655,7 +1660,7 @@ table.dbkit-table tr td {
     border: 1px solid #eff3f6;
     font-size: 14px;
     letter-spacing: 0;
-    color: #444;
+    color: #ffffff;
     line-height: 27px;
     font-weight: 400;
 }
@@ -2067,19 +2072,19 @@ table tr th {
     border-bottom: none;
 }
 
-table tr th,
+/* table tr th,
 table tr td {
     border-top: 1px solid rgba(120, 130, 140, 0.13) !important;
-}
+} */
 
 table tr td [class^="ti-"] {
     cursor: pointer;
 }
 
-.table-bordered td,
+/* .table-bordered td,
 .table-bordered th {
     border: 1px solid rgba(120, 130, 140, 0.13) !important;
-}
+} */
 
 .status-p {
     color: #fff;
@@ -2828,3 +2833,54 @@ table.dataTable thead td {
 }
 
 /*-------------------- END Offset Sidebar ------------------- */
+
+
+/*-------------------- 27. Mytable Start ------------------- */
+.table-tittle {
+    color: #FFFFFF;
+}
+
+#mytable {
+    border-collapse:separate;
+    border-spacing: 0 8px;
+}
+
+#mytable thead tr {
+    color: #FFFFFF;
+    background-color: #2D3647;
+}
+
+#mytable thead tr th:nth-child(1) {
+    padding-left: 26px;
+    border-radius: 6px 0px 0px 6px;
+}
+
+#mytable thead tr th:nth-last-child(1) {
+    padding-right: 26px;
+    border-radius: 0px 6px 6px 0px;
+}
+
+#mytable thead tr th {
+    padding: 16px 0px;
+}
+
+#mytable tbody tr {
+    color: #FFFFFF;
+    background-color: #2D3647;
+}
+
+#mytable tbody tr td:nth-child(1) {
+    padding-left: 26px;
+    border-radius: 6px 0px 0px 6px;
+}
+
+#mytable tbody tr td:nth-last-child(1) {
+    padding-right: 26px;
+    border-radius: 0px 6px 6px 0px;
+}
+
+#mytable tbody tr td {
+    padding: 2px 0px;
+}
+
+/*-------------------- END Mytable Start ------------------- */
